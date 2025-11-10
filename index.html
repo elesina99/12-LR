@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перевір свої знання з іноземної мови!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="difficulty-select">
+        <label for="difficulty">Оберіть рівень складності слів:</label>
+        <select id="difficulty">
+            <option value="A1" selected>A1 - Початковий</option>
+            <option value="B1">B1 - Середній</option>
+            <option value="C1">C1 - Просунутий</option>
+        </select>
+    </div>
+
+    <div class="card">
+        <h2 id="word">Слово</h2>
+        <input type="text" id="translation" placeholder="Введіть переклад...">
+        <button id="checkBtn">Перевірити</button>
+        <div class="stats">
+            <p>Раунд: <span id="step">1</span> / <span id="total">10</span></p>
+            <p>Вірно) <span id="correct">0</span> / Невірно( <span id="wrong">0</span></p>
+        </div>
+    </div>
+
+    <div class="modal" id="resultModal" style="display:none;">
+        <div class="modal-content">
+            <h3>Результати...</h3>
+            <p id="summary"></p>
+            <button id="restartBtn">Розпочати знову!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+ 
